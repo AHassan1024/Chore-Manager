@@ -18,9 +18,11 @@ def add_chore(chore):
 
 
 def remove_chore(i):
-  # TODO: Introduce error handling on non-existent tasks.
-    chore_list.pop(i - 1)
-    print("Chore removed!\n Updated list:")
+    if len(chore_list) > i:
+        print("Chore removal unsuccessful")
+    else:
+        chore_list.pop(i - 1)
+        print("Chore removed!\n Updated list:")
     list_chores()
 
 
