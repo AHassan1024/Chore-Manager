@@ -13,5 +13,6 @@ What can it do?
 - [x] Maintain a list of chores
 - [x] Ask for chores
 - [x] Remove chores by index number
+- [x] Menu options not numbered correctly
 - [ ] Chores not saved beyond shell
-- [ ] Menu options not numbered correctly
+- [ ] Extend to support sub-chores

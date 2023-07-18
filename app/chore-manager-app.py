@@ -5,7 +5,8 @@
 # - Extend to support repeating tasks
 # - Refactor to move chore_list into a better form that supports sub lists
 # - Write to file
-# - Save list beyond the terminal command line and add sub lists
+# - Save list beyond the terminal command line
+# - Add sub lists
 
 chore_list = []
 
@@ -37,7 +38,7 @@ def print_menu():
     print("1. List Chores")
     print("2. Add Chore")
     print("3. Remove Chore")
-    print("6. To exit, or 'q'")
+    print("4. To exit, or 'q'")
 
 
 def main():
@@ -55,7 +56,7 @@ def main():
             list_chores()
             remove_chore(int(input()))
 
-        elif (choice == "6") or (choice == "q"):
+        elif (choice == "4") or (choice == "q"):
             print("Goodbye!")
             break
         else:
