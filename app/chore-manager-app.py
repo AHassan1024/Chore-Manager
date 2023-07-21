@@ -1,5 +1,5 @@
 # Started: 16th July 2023
-# Last Edited: 17th July 2023
+# Last Edited: 18th July 2023
 # Next steps:
 # - Extend to support task searching
 # - Extend to support repeating tasks
@@ -7,6 +7,8 @@
 # - Write to file
 # - Save list beyond the terminal command line
 # - Add sub lists
+
+import json
 
 chore_list = []
 
@@ -35,12 +37,20 @@ def list_chores():
             print(f"{index}. {chore}")
 
 
+def save_to_file(filename):
+    with open(filename, 'w') as file:
+        json.dump(chore_list, file)
+    print(f"Chores saved to {filename}.")
+    # Note: Saves file in main, need to fix
+
+
 def print_menu():
     print("\n--- Chore Manager ---")
     print("1. List Chores")
     print("2. Add Chore")
     print("3. Remove Chore")
-    print("4. To exit, or 'q'")
+    print("4. Save List to File")
+    print("5. To exit, or 'q'")
 
 
 def main():
@@ -57,8 +67,9 @@ def main():
             print("Choose a chore from the list to remove:")
             list_chores()
             remove_chore(int(input()))
-
-        elif (choice == "4") or (choice == "q"):
+        elif choice == "4":
+            save_to_file(input("Enter the filename to add chores to:"))
+        elif (choice == "5") or (choice == "q"):
             print("Goodbye!")
             break
         else:

@@ -14,5 +14,6 @@ What can it do?
 - [x] Ask for chores
 - [x] Remove chores by index number
 - [x] Menu options not numbered correctly
-- [ ] Chores not saved beyond shell
+- [x] Chores not saved beyond shell
+- [ ] Chores need to be saved with some folder management
 - [ ] Extend to support sub-chores
